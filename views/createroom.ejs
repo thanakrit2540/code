@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Room To Server</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+      <section class="hero is-primary">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                      <img src="https://lh5.googleusercontent.com/5uHYeEyLH244U5MvpngbUQUqfCzl0GVOPBKqVNObz7LkjOPKMazSxPrKL-1ztyNTpYMdheKgy3pM9pEcEquSj6hMw_H997VLIhQszJblblDpbs3YIgeWLbDgIWLOOLRn46qkFXNO" align="center" width="10%" height="10%">&emsp; เพิ่มห้อง <br clear="left">
+              </h1>
+            </div>
+          </div>
+  </section>
+    <div class="container">
+        <form method="POST" action="/home/createroom">
+            <div class="form-group">
+                <label for="item">ID</label>
+                <input type="text" class="form-control" id="ID" name="ID">
+              </div>
+              <div class="form-group">
+                <label for="item">Building</label>
+                <select name="building" id="building" class="form-control">
+                  <option value="" hidden>เลือก...</option>
+                  <option value="IF">IF</option>
+                  <option value="QS">QS</option>
+                  <option value="UAD">UAD</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="item">Floor</label>
+                <select name="floor" id="floor" class="form-control">
+                  <option value="" hidden>เลือก...</option>
+                  <option value="1">1</option>
+                  <option value="1">2</option>
+                  <option value="1">3</option>
+                </select>
+              </div>
+
+
+              
+              
+         
+
+          <button type="submit" class="input button is-success  btn btn-default" >Add Building</button>
+          
+          
+        </form>
+    </div>
+  </body>
+</html>

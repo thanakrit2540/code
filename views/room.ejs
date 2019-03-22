@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>building</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+      <section class="hero is-primary">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                      <img src="https://lh5.googleusercontent.com/5uHYeEyLH244U5MvpngbUQUqfCzl0GVOPBKqVNObz7LkjOPKMazSxPrKL-1ztyNTpYMdheKgy3pM9pEcEquSj6hMw_H997VLIhQszJblblDpbs3YIgeWLbDgIWLOOLRn46qkFXNO" align="center" width="10%" height="10%">&emsp; จัดการห้อง <br clear="left">
+              </h1>
+            </div>
+          </div>
+  </section>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-sm-2" style="background-color: black; width: 10%;">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link " href="/home/users">จัดการบุคลากร</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/home/building">จัดการตึก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/home/room">จัดการห้อง</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/home/subjects">คอร์สเรียน</a>
+          </li>
+         
+
+        </ul>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <center style="width: 83%;">
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td><b>ID</b></td> 
+            <td><b>floor</b></td>
+            <td><b>building</b></td>
+            <td colspan="2"></td>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < room.length; i++) { %>
+          <tr>
+            <td><%= room[i].ID %></td>
+            <td><%= room[i].floor %>  </td>
+            <td><%= room[i].building %></td>
+            <td><a href="/home/editroom/<%= room[i]._id %>" class="btn btn-primary">Edit</a></td>
+            <td><a href="/home/deleteroom/<%= room[i]._id %>" class="btn btn-danger">Delete</a></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <br>
+      <a href="/home/createroom" class="btn btn-success">add room to database</a>
+     
+    </div>
+          </center>
+        </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add User To Server</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+      <section class="hero is-primary">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                      <img src="https://lh5.googleusercontent.com/5uHYeEyLH244U5MvpngbUQUqfCzl0GVOPBKqVNObz7LkjOPKMazSxPrKL-1ztyNTpYMdheKgy3pM9pEcEquSj6hMw_H997VLIhQszJblblDpbs3YIgeWLbDgIWLOOLRn46qkFXNO" align="center" width="10%" height="10%">&emsp; เพิ่มผู้ใช้ <br clear="left">
+              </h1>
+            </div>
+          </div>
+  </section>
+    <div class="container">
+        <form method="POST" action="/home/create">
+          <div class="form-group">
+            <label for="item">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="item">password</label>
+            <input type="text" class="form-control" id="password" name="password">
+          </div>
+
+         
+          <div class="form-group">
+            <label for="item">firstName</label>
+            <input type="text" class="form-control" id="firstName" name="firstName">
+          </div>
+
+          <div class="form-group">
+              <label for="item">lastName</label>
+              <input type="text" class="form-control" id="password" name="password">
+            </div>
+          <div class="form-group">
+            <label for="item">type</label>
+            <select name="type" id="type" class="form-control">
+              <option value="" hidden>เลือก...</option>
+              <option value="student">นิสิต</option>
+              <option value="teacher">อาจารย์</option>
+              <option value="officer">เจ้าหน้าที่</option>
+            </select>
+          </div>
+          <button type="submit" class="input button is-success  btn btn-default" >Add User</button>
+          
+          
+        </form>
+    </div>
+  </body>
+</html>
